@@ -1,0 +1,337 @@
+@charset "UTF-8";
+/*expresión hexadecimal o RGBA*/
+/*expresión - string*/
+* {
+  margin: 0px;
+  /*expresión - numeros*/
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFEFE7;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+nav {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFEFE7;
+  color: #7C6A0A;
+  padding: 15px;
+}
+nav p {
+  font-size: 1.5em;
+  padding-left: 30px;
+}
+nav .icons {
+  display: flex;
+  gap: 15px;
+}
+nav .icons button {
+  background: none;
+  border-style: none;
+}
+
+main {
+  color: #7C6A0A;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+main article {
+  display: flex;
+  width: auto;
+  flex-direction: row;
+  margin: auto;
+  align-content: center;
+  gap: 80px;
+  padding: 15px;
+}
+main article .impact-section {
+  padding: 40px;
+}
+main article h1 {
+  font-size: 3em;
+  margin-top: 0;
+  font-weight: 700;
+  line-height: 78px;
+  text-align: left;
+}
+main article p {
+  width: 35vw;
+  text-align: justify;
+  line-height: 22px;
+  max-width: 100%;
+  min-width: 100%;
+  margin-top: 25px;
+}
+main article button {
+  width: 12vw;
+  min-width: 25vh;
+  border-radius: 30px;
+  border-style: none;
+  background-color: #FA9500;
+  color: #FFEFE7;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 20px;
+  margin-top: 60px;
+}
+main article .image-section {
+  width: auto;
+}
+main article img {
+  width: 22vw;
+  min-width: 50vh;
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+section {
+  width: 100%;
+  height: auto;
+  padding: 40px 50px 40px 50px;
+}
+section h2 {
+  font-size: 2em;
+}
+section .healthcare, section .furniture {
+  padding-bottom: 40px;
+}
+section .healthcare h2, section .furniture h2 {
+  font-weight: 300;
+  padding-bottom: 60px;
+}
+section .healthcare .card-section, section .furniture .card-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 150px;
+       column-gap: 150px;
+  row-gap: 40px;
+}
+section .healthcare .product-card, section .furniture .product-card {
+  width: 18vw;
+  min-width: 200px;
+  height: 72vh;
+  background-color: #FFDAC6;
+  padding: 25px;
+  border-radius: 10px;
+}
+section .healthcare .product-card .icon, section .furniture .product-card .icon {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 15px;
+  margin-top: -10px;
+  padding: 2px;
+}
+section .healthcare .product-card .icon svg, section .furniture .product-card .icon svg {
+  width: 20px;
+}
+section .healthcare .product-card h3, section .furniture .product-card h3 {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+section .healthcare .product-card p, section .furniture .product-card p {
+  text-align: center;
+}
+section .healthcare .product-card .product-image, section .furniture .product-card .product-image {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+section .furniture {
+  /*dando como herencia los estilos de healthcare a furniture*/
+}
+section .furniture .product-card {
+  background-color: #bdb37c;
+}
+
+.info-section {
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  margin-bottom: 30px;
+  margin-top: -30px;
+}
+.info-section .earth-innovation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+}
+.info-section .earth-innovation .about-us, .info-section .earth-innovation .innovation {
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+.info-section .earth-innovation .about-us h2, .info-section .earth-innovation .innovation h2 {
+  justify-items: flex-start;
+}
+.info-section .earth-innovation .about-us .earth, .info-section .earth-innovation .innovation .earth {
+  display: flex;
+}
+.info-section .earth-innovation .about-us p, .info-section .earth-innovation .innovation p {
+  width: 18vw;
+  margin-top: 20px;
+  text-align: center;
+  color: #faa72a;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.info-section h2 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.info-section .gallery {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info-section .gallery img {
+  min-width: 80%;
+  width: 28vw;
+  height: 45vh;
+  background-size: cover;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+}
+.info-section .gallery img:hover {
+  transform: scale(1.1);
+}
+.info-section .location {
+  width: 100%;
+  height: 100%;
+}
+.info-section .location h2 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.info-section .location .map {
+  width: 100%;
+  height: 100%;
+}
+.info-section .location .map img {
+  width: 100%;
+  height: 100%;
+}
+.info-section .location p {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.info-section .location .addres {
+  text-indent: 25px;
+}
+
+footer {
+  background-color: #FA9500;
+  width: 100%;
+  height: 250px;
+}
+footer h3 {
+  color: #FFEFE7;
+  padding: 20px;
+  margin-left: 20px;
+  font-size: 1.3em;
+}
+footer p {
+  color: #FFEFE7;
+  padding: 15px;
+  margin-left: 25px;
+}
+footer .social-media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+footer .social-media img {
+  width: 25px;
+}
+
+/* ------------medidas responsives------------*/
+@media (max-width: 768px) {
+  nav p {
+    font-weight: 500;
+  }
+  nav .icons {
+    padding-right: 15px;
+  }
+  nav .icons svg {
+    width: 20px;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  main article {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f3d0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  main article img {
+    display: none;
+  }
+  .info-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .info-section h2 {
+    text-align: center;
+    white-space: pre-line !important;
+    font-size: 1.5em;
+  }
+  .info-section .earth-innovation {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-section .earth-innovation .about-us, .info-section .earth-innovation .innovation {
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+  }
+  .info-section .earth-innovation .about-us p, .info-section .earth-innovation .innovation p {
+    width: 100%;
+    text-align: justify;
+    margin: 30px 0 25px 0;
+  }
+  .info-section .gallery {
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    align-self: center;
+    gap: 20px;
+  }
+  .info-section .gallery img {
+    width: 60vw;
+  }
+  .info-section .location p {
+    font-size: 13px;
+  }
+  footer .social-media {
+    width: 100%;
+  }
+  footer .social-media img {
+    width: 15px;
+  }
+}/*# sourceMappingURL=main.css.map */
