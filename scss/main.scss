@@ -150,7 +150,7 @@ section {
         .product-card {
             width: 18vw;
             min-width: 200px;
-            height: 72vh;
+            height: auto;
             background-color: $secundary-color;
             padding: 25px;
             border-radius: 10px;
@@ -196,11 +196,6 @@ section {
 
 
         }
-
-
-
-
-
     }
 
     .furniture {
@@ -208,7 +203,8 @@ section {
 
         /*dando como herencia los estilos de healthcare a furniture*/
         .product-card {
-            background-color: #bdb37c;
+            background-color: #d2c893;
+         
         }
     }
 }
@@ -394,6 +390,7 @@ footer {
             }
         }
     }
+    
     .info-section {
         display: flex;
         flex-direction: column;

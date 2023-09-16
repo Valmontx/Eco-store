@@ -116,7 +116,7 @@ section .healthcare .card-section, section .furniture .card-section {
 section .healthcare .product-card, section .furniture .product-card {
   width: 18vw;
   min-width: 200px;
-  height: 72vh;
+  height: auto;
   background-color: #FFDAC6;
   padding: 25px;
   border-radius: 10px;
@@ -155,7 +155,7 @@ section .furniture {
   /*dando como herencia los estilos de healthcare a furniture*/
 }
 section .furniture .product-card {
-  background-color: #bdb37c;
+  background-color: #d2c893;
 }
 
 .info-section {
