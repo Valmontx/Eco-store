@@ -6,6 +6,20 @@ $primary-text-color: #7C6A0A;
 $font-stack: 'IBM Plex Sans', sans-serif;
 /*expresión - string*/
 
+@mixin flexCenter ($direction, $content, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin buttonStyle {
+    button {
+        background: none;
+        border-style: none;
+    }
+}
+
 * {
     margin: 0px;
     /*expresión - numeros*/
@@ -21,8 +35,7 @@ body {
 
 nav {
     width: auto;
-    display: flex;
-    justify-content: space-between;
+    @include flexCenter(row, space-between, center);
     background-color: $primary-color;
     color: $primary-text-color;
     padding: 15px;
@@ -35,11 +48,7 @@ nav {
     .icons {
         display: flex;
         gap: 15px;
-
-        button {
-            background: none;
-            border-style: none;
-        }
+        @include buttonStyle()
     }
 }
 
@@ -50,11 +59,9 @@ main {
     flex-direction: column;
 
     article {
-        display: flex;
+        @include flexCenter(row, space-between, center);
         width: auto;
-        flex-direction: row;
         margin: auto;
-        align-content: center;
         gap: 80px;
         padding: 15px;
 
@@ -68,7 +75,6 @@ main {
             font-weight: 700;
             line-height: 78px;
             text-align: left;
-
         }
 
         p {
@@ -78,7 +84,6 @@ main {
             max-width: 100%;
             min-width: 100%;
             margin-top: 25px;
-
         }
 
         button {
@@ -92,35 +97,22 @@ main {
             font-size: 15px;
             padding: 20px;
             margin-top: 60px;
-
         }
 
-
         .image-section {
-
             width: auto;
-
-
-
-
         }
 
         img {
-
             width: 22vw;
             min-width: 50vh;
             max-width: 100%;
             border-radius: 20px;
-            // margin-top: 40px;
-
-
         }
-
     }
 }
 
 section {
-
     width: 100%;
     height: auto;
     padding: 40px 50px 40px 50px;
@@ -138,13 +130,10 @@ section {
         }
 
         .card-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flexCenter(row,center, center);
             flex-wrap: wrap;
             column-gap: 150px;
             row-gap: 40px;
-
         }
 
         .product-card {
@@ -154,7 +143,6 @@ section {
             background-color: $secundary-color;
             padding: 25px;
             border-radius: 10px;
-
             .icon {
                 width: 100%;
                 display: flex;
@@ -162,16 +150,12 @@ section {
                 margin-left: 15px;
                 margin-top: -10px;
                 padding: 2px;
-
-
                 svg {
                     width: 20px;
-
                 }
             }
 
             h3 {
-
                 text-align: center;
                 font-size: 18px;
                 margin-top: 10px;
@@ -180,31 +164,23 @@ section {
 
             p {
                 text-align: center;
-
             }
 
-
             .product-image {
+                @include flexCenter(column,center, center);
                 width: 100%;
                 height: 100%;
-                justify-content: center;
-                align-items: center;
                 background-size: cover;
                 object-fit: cover;
                 border-radius: 8px;
             }
-
-
         }
     }
-
-    .furniture {
+   .furniture {
         @extend .healthcare;
-
         /*dando como herencia los estilos de healthcare a furniture*/
         .product-card {
             background-color: #d2c893;
-         
         }
     }
 }
@@ -216,14 +192,10 @@ section {
     margin-bottom: 30px;
     margin-top: -30px;
 
-
-
     .earth-innovation {
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        padding-bottom: 20px;
+        @include flexCenter(row,space-evenly, center);
+        padding: 20px;
 
         .about-us {
             display: flex;
@@ -232,29 +204,17 @@ section {
 
             h2 {
                 justify-items: flex-start;
-
-
-            }
-
-            .earth {
-                display: flex;
-
-
             }
 
             p {
-
                 width: 18vw;
                 margin-top: 20px;
                 text-align: center;
                 color: #faa72a;
                 font-size: 1.2em;
                 font-weight: 500;
-
-
             }
         }
-
     }
 
     .innovation {
@@ -264,18 +224,13 @@ section {
     h2 {
         margin-top: 60px;
         margin-bottom: 60px;
-
     }
 
     .gallery {
         width: 100%;
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
+        @include flexCenter(row,space-between ,center);
         img {
-
             min-width: 80%;
             width: 28vw;
             height: 45vh;
@@ -283,11 +238,9 @@ section {
             background-position: center;
             object-fit: cover;
             border-radius: 16px;
-
-            &:hover {
-                transform: scale(1.1);
+             &:hover {
+              transform: scale(1.1);
             }
-
         }
     }
 
@@ -313,14 +266,12 @@ section {
         p {
             font-size: 1.2em;
             font-weight: 500;
-
         }
 
         .addres {
             text-indent: 25px;
         }
     }
-
 }
 
 footer {
@@ -347,35 +298,26 @@ footer {
         display: flex;
         justify-content: center;
         gap: 25px;
-
         img {
             width: 25px;
-
         }
     }
 }
-
 /* ------------medidas responsives------------*/
 @media (max-width: 768px) {
     nav {
         p {
             font-weight: 500;
         }
-
         .icons {
             padding-right: 15px;
-
             svg {
                 width: 20px;
             }
         }
     }
-
     main {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-
+@include flexCenter(column,center,center);
         article {
             display: flex;
             flex-direction: column;
@@ -383,36 +325,24 @@ footer {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-
             img {
                 display: none;
-
             }
         }
     }
-    
     .info-section {
-        display: flex;
-        flex-direction: column;
-
+        @include flexCenter(column,center,center);
         h2 {
             text-align: center;
             white-space: pre-line !important;
             font-size: 1.5em;
-
         }
-
         .earth-innovation {
-
-            flex-direction: column;
-            align-items: center;
-
-
+          @include flexCenter(column,center,center);
             .about-us {
                 flex-direction: column;
                 align-self: center;
                 width: 100%;
-
 
                 p {
                     width: 100%;
@@ -420,39 +350,29 @@ footer {
                     margin: 30px 0 25px 0;
                 }
             }
-
         }
-
         .gallery {
-            flex-direction: column;
+           @include flexCenter(column,center,center);
             width: 80%;
-            align-items: center;
-            align-self: center;
             gap: 20px;
-            
             img {
                 width: 60vw;
-                
             }
-
         }
 
         .location {
             p {
                 font-size: 13px;
             }
-            
         }
-
     }
-    footer{
-        .social-media{
+    footer {
+        .social-media {
             width: 100%;
-            img{
+
+            img {
                 width: 15px;
             }
-
         }
     }
-
 }
